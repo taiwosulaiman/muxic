@@ -1,0 +1,81 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('../images/acctImage.jpeg');
+}
+
+#reg{
+    padding-top: 5px;
+    font-family:monospace;
+    font-size: 2.5em;
+    color: #fff;
+    text-align: center;
+}
+
+#sign-up{
+   /*  background: #2a3742;
+    border-radius: 25px;
+   border: 1px solid #000000; 
+   box-shadow: 0 0 15px black;*/
+   background-color: #023c73;
+    width: 45%;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+margin-top: 45px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"]{
+    width: 60%;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.mail{
+    padding-left: 27px;
+}
+
+#favorite-music,#user {
+    text-align: left;
+    margin: 20px auto;
+    padding-left: 10%;
+}
+
+
+button {
+    background-color: aqua;
+    color: #160466;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #0e7de6;
+    color: #fff;
+}
+
+#log{
+    color: #fff;
+}
+
+#already{
+    color: #fff;
+    margin: 0px;  
+    padding-bottom: 18px;
+    font-weight: lighter;
+}
+
+#acct-img{
+    width: 50%;
+}
