@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 include('auth.php');
 
 $error = "";
@@ -22,7 +22,7 @@ if (isset($_POST['signUp'])) {
 
      header("Location: index.html");
 }
-?> -->
+?> 
 
 
 

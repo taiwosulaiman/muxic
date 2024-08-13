@@ -3,6 +3,11 @@ function toggleMenu() {
     menu.classList.toggle('active');
 };
 
+function toggleProfile() {
+    const profileContent = document.getElementById('profile-content');
+    profileContent.classList.toggle('active');
+}
+
 // function playSong(musicUrl){
 //     var audioPlay = document.getElementById('audioPlay');
 //     var audioSource = document.getElementById('audioSource');

@@ -42,9 +42,33 @@ body {
     height: 50px;
 }
 /*>>>>>>>>*/
+.menu-header img{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+.art1{
+    display: flex;
+    padding: 10px;
+}
 
+.art1 h3{
+    font-size: 13px;
+    margin-top: 12px;
+    margin-left: 10px;
+}
 
-
+.art1 span img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+/*>>>>>>>>*/
+.menu-header img{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
 
 
 #musWeb{
@@ -221,3 +245,6 @@ body {
 #trending-songs a:hover{
     color: aqua;
 }
+
+
+
