@@ -28,5 +28,24 @@ class musicWeb{
             return (json_encode ($res));
         }
     }
+
+    // To get the music file
+    public function getFilePath($music_picture, $table) {
+        $sql = "SELECT music_file FROM $table WHERE music_picture = '$music_picture'";
+        //echo "<p>SQL Query: $sql</p>"; // Debugging output
+        $query = mysqli_query($this->link, $sql);
+        $result = array();
+    
+        while ($row = mysqli_fetch_array($query)) {
+            array_push($result, $row['music_file']);
+        }
+    
+        if (!empty($result)) {
+            return json_encode($result);
+        } else {
+            return null;
+        }
+    }
+    
 }
 ?>

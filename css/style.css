@@ -189,7 +189,27 @@ body {
 .content {
     padding: 20px;
 }
-.header audio{
+
+
+/*  FOR THE AUDIO */
+.audio-container {
+    margin: 100px auto 0;
+    padding: 10px;
+    max-width: 600px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.custom-audio {
+    width: 100%; /* Make the audio player responsive */
+    border-radius: 4px;
+}
+
+
+
+/*.header audio{
     height: 50px;
     margin-left: -400px;
     padding-top: 30px;
@@ -220,4 +240,4 @@ body {
 
 #trending-songs a:hover{
     color: aqua;
-}
+}*/

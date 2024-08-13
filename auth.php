@@ -23,7 +23,7 @@ artist text NOT NULL,
 music_file VARCHAR(255) NOT NULL,
 music_picture VARCHAR(255) NOT NULL,
 genre text NOT NULL,
-date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+date_added TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )";
 
 $mw -> createTable($sql);
