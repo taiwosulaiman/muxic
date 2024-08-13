@@ -1,4 +1,8 @@
+<<<<<<< HEAD
  <?php
+=======
+<?php
+>>>>>>> 70c60aa2b975cf5d0a938a0f5c695813f2707e7c
 include('auth.php');
 
 $error = "";

@@ -44,6 +44,7 @@ if (isset($_POST['music_picture'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profile.css">
     <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.css">
     <title>Music Project</title>
 </head>
@@ -91,13 +92,49 @@ if (isset($_POST['music_picture'])) {
             </div>
 
 
-
-            <h3 id="musWeb">TUNE PLAY</h3>
+```             <h3 id="musWeb">TUNE PLAY</h3>
 <div id="sign-log">
             <a href="sign-up.php">Sign up</a>
             <a href="login.html">Login</a>
 </div>
+<<<<<<< HEAD:index.php
         
+=======
+
+<!--  >>>> PROFILE >>>>-->
+<div id="profile-content">
+    <input type="checkbox" id="profile-toggle" class="profile-toggle">
+    <label for="profile-toggle" class="profile-container">
+        <img src="images/th.jpeg" alt="">
+    </label>
+
+    <div class="profile-pic">
+        <div class="profile-header">
+            <h2>Profile</h2>
+            <label for="profile-toggle" class="exitbutton">✖</label>
+        </div>
+        <div class="profile">
+            <li class="prof1">
+                <h3>Account</h3>
+            </li>
+            <li class="prof1">
+                <h3>View Profile</h3>
+            </li>
+            <li class="prof1">
+                <h3>Monetization</h3>
+            </li>
+            <li class="prof1">
+                <h3>Settings</h3>
+            </li>
+            <li class="prof1">
+                <h3>Log out</h3>
+            </li>
+        </div>
+    </div>
+</div>
+
+<!-- >>>>-->
+>>>>>>> 70c60aa2b975cf5d0a938a0f5c695813f2707e7c:index.html
         </div>
         <div class="content">
            
