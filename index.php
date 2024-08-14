@@ -93,7 +93,7 @@ if (isset($_POST['music_picture'])) {
 
             <h3 id="musWeb">TUNE PLAY</h3>
 
-           <?php         
+            <?php         
 if (isset($_SESSION['signUp']) && $_SESSION['signUp'] === true) {
     // User is logged in, display profile icon
     $profileIcon = '<div id="profile-content">
@@ -135,7 +135,6 @@ if (isset($_SESSION['signUp']) && $_SESSION['signUp'] === true) {
 
 <!-- rest of your HTML code -->
 <div id="sign-log">
-<<<<<<< HEAD
     <?php echo $profileIcon; ?>
     <?php if (!isset($_SESSION['signUp']) || $_SESSION['signUp'] !== true) { ?>
         <a href="sign-up.php">Sign Up</a>
@@ -145,45 +144,6 @@ if (isset($_SESSION['signUp']) && $_SESSION['signUp'] === true) {
 
 
 </div>
-=======
-            <a href="sign-up.php">Sign up</a>
-            <a href="login.html">Login</a>
-</div>
-
-<!--  >>>> PROFILE >>>>-->
-<div id="profile-content">
-    <input type="checkbox" id="profile-toggle" class="profile-toggle">
-    <label for="profile-toggle" class="profile-container">
-        <img src="images/th.jpeg" alt="">
-    </label>
-
-    <div class="profile-pic">
-        <div class="profile-header">
-            <h2>Profile</h2>
-            <label for="profile-toggle" class="exitbutton">✖</label>
-        </div>
-        <div class="profile">
-            <li class="prof1">
-                <h3>Account</h3>
-            </li>
-            <li class="prof1">
-                <h3>View Profile</h3>
-            </li>
-            <li class="prof1">
-                <h3>Monetization</h3>
-            </li>
-            <li class="prof1">
-                <h3>Settings</h3>
-            </li>
-            <li class="prof1">
-                <h3>Log out</h3>
-            </li>
-        </div>
-    </div>
-</div>
-
-<!-- >>>>-->
->>>>>>> 2513a3273ba7aa71682a51fed9c8393fa6c1eeaf
         </div>
         <div class="content">
 
@@ -362,23 +322,23 @@ if (isset($_SESSION['signUp']) && $_SESSION['signUp'] === true) {
 <div class="playlists">
     <div class="item">
         <img src="images/songsPictures/band.jpeg" alt="" id="eve">
-        <h3>Not Like Us by KENDRICK LAMAR</h3>
+        <h3>Band4Band By CENTRAL CEE</h3>
     </div>
     <div class="item">
         <img src="images/songsPictures/lala.jpeg" alt="" id="eve-lrwb">
-        <h3>The Box by RODDY RICCH</h3>
+        <h3>Lalali by SEVENTEEN</h3>
     </div>
     <div class="item">
         <img src="images/songsPictures/work.jpeg" alt="" id="eve-lrwb">
-        <h3>God's Plan by DRAKE</h3>
+        <h3>Work By ATEEZ</h3>
     </div>
     <div class="item">
         <img src="images/songsPictures/rockstar.jpeg" alt="" id="eve-lrwb">
-        <h3>Not Afraid by EMINEM</h3>
+        < <h3>RockStar By LISA</h3>
     </div>
     <div class="item">
         <img src="images/songsPictures/bouncy.jpeg" alt="" id="eve-lrwb">
-        <h3>Monsters You Made by BURNA BOY</h3>
+        <h3>Bouncy By ATEEZ </h3>
     </div>
     <div class="item">
         <img src="images/songsPictures/Ed_Sheeran_-_Beautiful_People.png" alt="" id="eve">
