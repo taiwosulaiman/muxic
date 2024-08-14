@@ -97,9 +97,6 @@ if (isset($_POST['music_picture'])) {
             <a href="sign-up.php">Sign up</a>
             <a href="login.html">Login</a>
 </div>
-<<<<<<< HEAD:index.php
-        
-=======
 
 <!--  >>>> PROFILE >>>>-->
 <div id="profile-content">
@@ -134,10 +131,8 @@ if (isset($_POST['music_picture'])) {
 </div>
 
 <!-- >>>>-->
->>>>>>> 70c60aa2b975cf5d0a938a0f5c695813f2707e7c:index.html
         </div>
         <div class="content">
-           
 
 <!-- KPOP PLAYLIST -->              
 <section>
@@ -164,12 +159,12 @@ if (isset($_POST['music_picture'])) {
 
     <div class="item">
     <form action="" method="post">
-    <input type="hidden" name="music_picture" value="images/songsPictures/but.jpeg">
+    <input type="hidden" name="music_picture" value="images/songsPictures/but.png">
         <img src="images/songsPictures/but.png" alt="" id="eve" onclick= "this.closest('form').submit();">
         <h3>Butter By BTS</h3>
 </form>
     </div>
-
+   
     <div class="item">
         <img src="images/songsPictures/dyn.jpeg" alt="" id="eve">
         <h3>Dynamite By BTS</h3>
@@ -265,50 +260,138 @@ if (isset($_POST['music_picture'])) {
 <div class="playlists">
     <div class="item">
         <img src="images/songsPictures/band.jpeg" alt="" id="eve">
-        <h3>Band4Band By CENTRAL CEE</h3>
+        <h3>Not Like Us by KENDRICK LAMAR</h3>
     </div>
     <div class="item">
         <img src="images/songsPictures/lala.jpeg" alt="" id="eve-lrwb">
-        <h3>Lalali by SEVENTEEN</h3>
+        <h3>The Box by RODDY RICCH</h3>
     </div>
     <div class="item">
         <img src="images/songsPictures/work.jpeg" alt="" id="eve-lrwb">
-        <h3>Work By ATEEZ</h3>
+        <h3>God's Plan by DRAKE</h3>
     </div>
     <div class="item">
         <img src="images/songsPictures/rockstar.jpeg" alt="" id="eve-lrwb">
-        <h3>RockStar By LISA</h3>
+        <h3>Not Afraid by EMINEM</h3>
     </div>
     <div class="item">
         <img src="images/songsPictures/bouncy.jpeg" alt="" id="eve-lrwb">
-        <h3>Bouncy By ATEEZ </h3>
+        <h3>Monsters You Made by BURNA BOY</h3>
     </div>
     <div class="item">
         <img src="images/songsPictures/Ed_Sheeran_-_Beautiful_People.png" alt="" id="eve">
-        <h3>Beautiful People By ED SHEERAN</h3>
+        <h3>Mockingbird by EMINEM</h3>
     </div>
     <div class="item">
         <img src="images/songsPictures/rock.jpeg" alt="" id="eve">
-        <h3>Rockabye By CLEAN BANDIT</h3>
+        <h3>In The Bible by DRAKE</h3>
     </div>
     <div class="item">
         <img src="images/songsPictures/outside.jpeg" alt="" id="eve">
-        <h3>Car's Outside By JAMES ARTHUR</h3>
+        <h3>Rules by DOJA CAT</h3>
     </div>
     <div class="item">
         <img src="images/songsPictures/Benson_Boone_-_Beautiful_Things.png" alt="" id="eve">
-        <h3>Beautiful Things By BENSON BOONE</h3>
+        <h3>Mask Off by FUTURE</h3>
     </div>
     <div class="item">
         <img src="images/songsPictures/perfect.jpeg" alt="" id="eve">
-        <h3>Perfect By ED SHEERAN</h3>
+        <h3>Street by DOJA CAT</h3>
     </div>
     
-
-
+<!-- GOSPEL PLAYLIST -->
+<section>
+    <h2 class="kpop-rnb">GOSPEL Playlist</h2>
+<div class="playlists">
+    <div class="item">
+        <img src="images/songsPictures/maverickfirm.jpeg" alt="" id="eve">
+        <h3>Firm Foundation by MAVERICK CITY MUSIC</h3>
+    </div>
+    <div class="item">
+        <img src="images/songsPictures/rescue lauren.jpeg" alt="" id="eve-lrwb">
+        <h3>Rescue by LAUREN DIAGLE</h3>
+    </div>
+    <div class="item">
+        <img src="images/songsPictures/iba nath.jpeg" alt="" id="eve-lrwb">
+        <h3>Iba by NATHANIEL BASSEY</h3>
+    </div>
+    <div class="item">
+        <img src="images/songsPictures/takeovertheo.jpeg" alt="" id="eve-lrwb">
+        <h3>Takeover by THEOPHILUS SUNDAY</h3>
+    </div>
+    <div class="item">
+        <img src="images/songsPictures/lauren.jpeg" alt="" id="eve-lrwb">
+        <h3>Remember by LAUREN DIAGLE</h3>
+    </div>
+    <div class="item">
+        <img src="images/songsPictures/yet maverick.jpeg" alt="" id="eve">
+        <h3>Yet by MAVERICK CITY</h3>
+    </div>
+    <div class="item">
+        <img src="images/songsPictures/yousay.jpeg" alt="" id="eve">
+        <h3>You Say By LAUREN DIAGLE</h3>
+    </div>
+    <div class="item">
+        <img src="images/songsPictures/mosesbliss.jpeg" alt="" id="eve">
+        <h3>You I Live For by MOSES BLISS</h3>
+    </div>
+    <div class="item">
+        <img src="images/songsPictures/larageorge.jpeg" alt="" id="eve">
+        <h3>Ijoba Orun by LARA GEORGE</h3>
+    </div>
+    <div class="item">
+        <img src="images/songsPictures/fragrancetofire.jpeg" alt="" id="eve">
+        <h3>Fragrance To Fire by DUNSIN OYEKAN</h3>
+    </div>
 </div>
 </section>
 
+<!-- AFROBEAT PLAYLIST -->
+<section>
+    <h2 class="kpop-rnb">AFROBEAT Playlist</h2>
+<div class="playlists">
+    <div class="item">
+        <img src="images/songsPictures/asake.jpeg" alt="" id="eve">
+        <h3>I Swear by ASAKE</h3>   
+    </div>
+    <div class="item">
+        <img src="images/songsPictures/asake.jpeg" alt="" id="eve-lrwb">
+        <h3>Mentally by ASAKE</h3>
+    </div>
+    <div class="item">
+        <img src="images/songsPictures/forever psquare.jpeg" alt="" id="eve-lrwb">
+        <h3>Forever by P-SQUARE</h3>
+    </div>
+    <div class="item">
+        <img src="images/songsPictures/runtown.jpeg" alt="" id="eve-lrwb">
+        <h3>Mad Over You by RUNTOWN</h3>
+    </div>
+    <div class="item">
+        <img src="images/songsPictures/nwababy.jpeg" alt="" id="eve-lrwb">
+        <h3>Nwa Baby by DAVIDO</h3>
+    </div>
+    <div class="item">
+        <img src="images/songsPictures/frames wizkid.jpeg" alt="" id="eve">
+        <h3>Frames by WIZKID</h3>
+    </div>
+    <div class="item">
+        <img src="images/songsPictures/demodavido.jpeg" alt="" id="eve">
+        <h3>Demo by DAVIDO</h3>
+    </div>
+    <div class="item">
+        <img src="images/songsPictures/noone psquare.jpeg" alt="" id="eve">
+        <h3>No One Like You by P-SQUARE</h3>
+    </div>
+    <div class="item">
+        <img src="images/songsPictures/ozebarema.jpeg" alt="" id="eve">
+        <h3>Ozeba by REMA</h3>
+    </div>
+    <div class="item">
+        <img src="images/songsPictures/asake.jpeg" alt="" id="eve">
+        <h3>Wave by ASAKE</h3>
+    </div>
+</div>
+</section>
 
 
 
