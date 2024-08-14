@@ -156,7 +156,7 @@ if (isset($_SESSION['signUp']) && $_SESSION['signUp'] === true) {
             <input type="hidden" name="music_picture" value="images/songsPictures/bst.jpeg">
         <img src="images/songsPictures/bst.jpeg" alt="" id="eve" onclick= "this.parentNode.submit();">
         </form>
-        <h3>Blood, Sweat & Tears By BTS.</h3>
+        <h3>Blood, Sweat & Tears By BTS</h3>
     </div>
     
     <div class="item">
