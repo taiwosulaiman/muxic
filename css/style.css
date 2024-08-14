@@ -107,6 +107,7 @@ body {
     
 }
 
+
 .item h3{
     cursor: pointer;
 }
@@ -248,6 +249,7 @@ footer p{
 padding: 10px;
 }
 
+<<<<<<< HEAD
 .profile .prof1:hover {
     color: #0e7de6;
 }
@@ -307,9 +309,16 @@ padding: 10px;
 /* Hide the checkbox */
 .profile-toggle {
     display: none;
+=======
+#trending-songs a:hover{
+    color: aqua;
+>>>>>>> 2513a3273ba7aa71682a51fed9c8393fa6c1eeaf
 }
 
 
 
+<<<<<<< HEAD
 
 /*  >>>>>>*/
+=======
+>>>>>>> 2513a3273ba7aa71682a51fed9c8393fa6c1eeaf
