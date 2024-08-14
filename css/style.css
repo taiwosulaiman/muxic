@@ -41,34 +41,13 @@ body {
     width: 50px;
     height: 50px;
 }
+
 /*>>>>>>>>*/
-.menu-header img{
+/* .menu-header img{
     border-radius: 50%;
     width: 40px;
     height: 40px;
-}
-.art1{
-    display: flex;
-    padding: 10px;
-}
-
-.art1 h3{
-    font-size: 13px;
-    margin-top: 12px;
-    margin-left: 10px;
-}
-
-.art1 span img{
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-}
-/*>>>>>>>>*/
-.menu-header img{
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-}
+} */
 
 
 #musWeb{
@@ -118,6 +97,7 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 7.5px;
+    margin: auto;
 }
 
 .item{
@@ -155,12 +135,14 @@ body {
 .image-container img {
     width: 100%;
 }
-/* .footer {
+
+footer p{
     margin-top: 20px;
-    background-color: #2c3640;
+   /*color: #2c3640;*/
+   text-align: center;
     padding: 10px 20px;
     border-radius: 10px;
-} */
+} 
 
 .menu-button {
     position: absolute;
@@ -233,42 +215,101 @@ body {
 
 
 
-/*.header audio{
-    height: 50px;
-    margin-left: -400px;
-    padding-top: 30px;
+/* ---->>> THIS IS FOR THE PROFILE ICON  */
+.profile-container {
+    border-radius: 50%;
+    outline: none;
+    border: none;
 }
 
-#trending{
-    color: aqua;
-    font-style: italic;
+.profile-container img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-top: 40px;
+    display: none; 
 }
 
-#trending-songs{
-    background-image: url('../images/images\ \(92\).jpeg');
-    background-size: cover;
-    height: 68vh;
-    width: 50%;
-}
-
-#trending-songs li{
-    padding-left: -40px;
+.profile {
+    background-color: aqua;
+    /*color: rgb(1, 1, 49);*/
+    width: 190px;
+    height: 250px;
     list-style-type: none;
-    padding: 20px 0 0 30px;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-#trending-songs a{
-    color: #ffffff;
+.prof1 {
+    color: #000;
     text-decoration: none;
+padding: 10px;
 }
 
-#trending-songs a:hover{
-    color: aqua;
-<<<<<<< HEAD
-}*/
-=======
+.profile .prof1:hover {
+    color: #0e7de6;
+}
+
+.exitbutton {
+    background-color: #ff0000;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+#profile-content {
+    position: relative;
+    margin-top: -100px;
+    font-family: calibri;
+}
+
+.profile-container {
+    position: absolute;
+    top: 20px;
+    right: 20px; 
+    padding: 10px 20px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.profile-pic {
+    position: fixed;
+    top: 0;
+    right: 80px;
+    width: 250px;
+    height: 100%;
+    transition: right 0.3s;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1000;
+    border: 1px transparent #ccc;
+    display: none;
+    margin-top: 20px;
+}
+
+.profile-toggle:checked + .profile-container + .profile-pic {
+    display: block;
+}
+
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Hide the checkbox */
+.profile-toggle {
+    display: none;
 }
 
 
 
->>>>>>> 70c60aa2b975cf5d0a938a0f5c695813f2707e7c
+
+/*  >>>>>>*/

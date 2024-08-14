@@ -2,7 +2,7 @@
 class musicWeb {
     public $link;
     
-    public function __construct($dbname, $host = "localhost", $username = "root", $password = "") {
+    public function __construct($host = "localhost", $username = "root", $password = "", $dbname) {
         $this->link = mysqli_connect($host, $username, $password); // Initial connection without selecting a database
         $this->createDb($dbname); // Create the database if it doesn't exist
         $this->link = mysqli_connect($host, $username, $password, $dbname); // Connect to the newly created or existing database
@@ -27,6 +27,22 @@ class musicWeb {
             return json_encode($res);
         }
     }
+
+// After registering
+public function login($email, $password, $table) {
+    $encr_ps = sha1($password); 
+    $sql = "SELECT * FROM $table WHERE email='$email' AND password='$encr_ps'";
+    $query = mysqli_query($this->link, $sql);
+    $data = mysqli_fetch_array($query);
+
+    if ($data) {
+        $res = array('message' => "Login Successful");
+        return json_encode($res);
+    } else {
+        $res = array('message' => "Invalid Email or Password");
+        return json_encode($res); 
+    }
+}
 
     // To get the music file
     public function getFilePath($music_picture, $table) {

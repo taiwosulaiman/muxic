@@ -4,7 +4,7 @@ session_start();
 require_once("musicWeb.php");
 
 // declaring and initializing an object
-$mw = new musicWeb("musicwebsite_project","localhost","root","");
+$mw = new musicWeb("localhost","root","","musicwebsite_project");
 
 $sql = "CREATE TABLE IF NOT EXISTS userinfo_table(
     sn INT AUTO_INCREMENT PRIMARY KEY,

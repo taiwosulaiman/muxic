@@ -1,8 +1,4 @@
-<<<<<<< HEAD
- <?php
-=======
 <?php
->>>>>>> 70c60aa2b975cf5d0a938a0f5c695813f2707e7c
 include('auth.php');
 
 $error = "";
@@ -10,24 +6,24 @@ if (isset($_POST['signUp'])) {
     $_SESSION["username"] = mysqli_real_escape_string($mw->link,$_POST['un']);
     $_SESSION["email"] = mysqli_real_escape_string($mw->link,$_POST['email']);
     $_SESSION["password"] = mysqli_real_escape_string($mw->link,$_POST['ps']);
-    // $_SESSION["musicGenre"] = mysqli_real_escape_string($mw->link,$_POST['music']);
-    // $_SESSION["userCategory"] = mysqli_real_escape_string($mw->link,$_POST['category']);
+    // Encrypt the password
+    $encr_ps = sha1($_SESSION["password"]);
     // For multiple music genre
         $_SESSION["musicGenre"] = mysqli_real_escape_string($mw->link, implode(', ', $_POST['music']));
     // For multiple user categories
         $_SESSION["userCategory"] = mysqli_real_escape_string($mw->link, implode(', ', $_POST['category']));
     
+        $_SESSION['signUp'] = true;  // This will help the profile icon to show after signing up
 
     $query = "INSERT INTO userinfo_table(username, email, password, favorite_music_genre, user_category)";
-    $query .= "VALUES('".$_SESSION['username']."', '".$_SESSION['email']."', '".$_SESSION['password']."', '".$_SESSION['musicGenre']."',
+    $query .= "VALUES('".$_SESSION['username']."', '".$_SESSION['email']."', '".$encr_ps."', '".$_SESSION['musicGenre']."',
      '".$_SESSION['userCategory']."' )";
 
      $error = json_decode($mw->postData($query));
-
-     header("Location: index.php");
+    
+        header("Location: index.php");   
 }
-?> 
-
+?>
 
 
 <!DOCTYPE html>
@@ -45,7 +41,7 @@ if (isset($_POST['signUp'])) {
 
         <div id="sign-up">
             <form action="" method="POST">
-                <h2 id="reg">REGISTER</h2><span style="color: white;"><!--<?php echo (@$error->message); ?>--> </span>
+                <h2 id="reg">REGISTER</h2><span style="color: white;"><?php echo (@$error->message); ?> </span>
 
                 <div>
                     <label for="username">Username:
