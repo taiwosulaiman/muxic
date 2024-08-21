@@ -50,7 +50,7 @@ body {
 } */
 
 
-#musWeb{
+#musWeb{ /* THIS IS FOR THE 'TUNE PLAY' IN THE HEADER */
     font-size: 40px;
     color: #fff;
     padding-left: 450px;
@@ -72,11 +72,12 @@ body {
     color: #fff;
 }
 
-.content {
+.content { /* THIS IS FOR THE FONT IN THE BODY */
     font-weight: lighter;
     font-family: calibri;
 }
 
+/* THIS IS FOR THE IMAGE OF THE SONGS IN THE HOME PAGE*/
 #eve{
     width: 210px;
     cursor: pointer;
@@ -87,20 +88,18 @@ body {
     height: 210px;
     cursor: pointer;
 }
+/* >>>>> */
 
-
-
-
-.playlists{
+.playlists{ /* THIS IS FOR ALL THE PLAYLISTS IN THE HOME PAGE */
     margin-top: 15px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 7.5px;
+    gap: 7.3px;
     margin: auto;
 }
 
-.item{
+.item{ /* THIS IS FOR EACH OF THE SONG IN THE HOME PAGE */
     text-align: center;
     flex: 1 1 calc(20% - 10px); /* 25% per item */
     padding-top: 10px;
@@ -111,32 +110,14 @@ body {
 .item h3{
     cursor: pointer;
 }
-.kpop-rnb{
+
+.kpop-rnb{ /* THIS IS FOR THE HEADING OF EACH OF THE PLAYLIST IN THE HOME PAGE */
     font-size: 2em;
     color: aqua;
     padding-top: 10px;
 }
-/*.sidebar {
-    flex: 1;
-    background-color: #2a3742;
-    padding: 20px;
-    border-radius: 10px;
-    margin-right: 20px;
-}*/
-.main-content {
-    flex: 3;
-    padding: 20px;
-    border-radius: 10px;
-}
-.image-container {
-    width: 100%;
-    border-radius: 10px;
-    overflow: hidden;
-}
-.image-container img {
-    width: 100%;
-}
 
+/* THIS IS FOR THE FOOTER */
 footer p{
     margin-top: 20px;
    /*color: #2c3640;*/
@@ -144,7 +125,9 @@ footer p{
     padding: 10px 20px;
     border-radius: 10px;
 } 
+/* >>>> */
 
+/* FOR THE ARTISTS MENU */
 .menu-button {
     position: absolute;
     top: 20px;
@@ -193,6 +176,8 @@ footer p{
     border-radius: 5px;
     padding: 5px 10px;
 }
+/* >>>>> */
+
 .content {
     padding: 20px;
 }
@@ -249,7 +234,6 @@ footer p{
 padding: 10px;
 }
 
-<<<<<<< HEAD
 .profile .prof1:hover {
     color: #0e7de6;
 }
@@ -309,16 +293,5 @@ padding: 10px;
 /* Hide the checkbox */
 .profile-toggle {
     display: none;
-=======
-#trending-songs a:hover{
-    color: aqua;
->>>>>>> 2513a3273ba7aa71682a51fed9c8393fa6c1eeaf
 }
-
-
-
-<<<<<<< HEAD
-
 /*  >>>>>>*/
-=======
->>>>>>> 2513a3273ba7aa71682a51fed9c8393fa6c1eeaf

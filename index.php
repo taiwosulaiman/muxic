@@ -1,17 +1,11 @@
 <?php
 include('auth.php');
-// $signed_loggedIn = isset($_SESSION['signUp']) === true;  //&& $_SESSION['logged_in'] === true;
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    echo '<pre>';
-    print_r($_POST);
-    echo '</pre>';
-}
-// Check if the form was submitted and if the music_picture field is set
+// Check if the form was submitted 
 if (isset($_POST['music_picture'])) {
     //echo "hiii";
     // Retrieve the music_picture value from POST data
     $music_picture = $_POST['music_picture'];
-    // Fetch the file paths from the database
+    // Fetch the music file paths from the database
     $audioPaths = json_decode($mw->getFilePath($music_picture, "songlist_table"), true);
 
     if ($audioPaths) {
@@ -33,16 +27,11 @@ if (isset($_POST['music_picture'])) {
 ?> 
 
 
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- <link rel="stylesheet" href="css/profile.css"> -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.css">
     <title>Music Project</title>
@@ -92,7 +81,7 @@ if (isset($_POST['music_picture'])) {
 
 
             <h3 id="musWeb">TUNE PLAY</h3>
-
+<!-- ** FOR DISPLAYING THE PROFILE ICON AFTER SIGNING UP OR LOGGING IN ***-->
             <?php         
 if (isset($_SESSION['signUp']) && $_SESSION['signUp'] === true) {
     // User is logged in, display profile icon
@@ -131,9 +120,8 @@ if (isset($_SESSION['signUp']) && $_SESSION['signUp'] === true) {
     $profileIcon = '';
 }
 
-?>
-
-<!-- rest of your HTML code -->
+?> 
+<!-- DISPLAY THIS INSTEAD IF NOT LOGGED IN  -->
 <div id="sign-log">
     <?php echo $profileIcon; ?>
     <?php if (!isset($_SESSION['signUp']) || $_SESSION['signUp'] !== true) { ?>
@@ -142,65 +130,67 @@ if (isset($_SESSION['signUp']) && $_SESSION['signUp'] === true) {
     <?php } ?> 
 </div>
 
-
+    <!-- END OF PROFILE ICON  -->
 </div>
-        </div>
+        </div>                  
+                                                                      
         <div class="content">
-
 <!-- KPOP PLAYLIST -->              
 <section>
     <h2 class="kpop-rnb">K-Pop Playlist</h2>
 <div class="playlists">
-    <div class="item">
-        <form action="" method="post">
+    <div class="item">   <!-- By adding onclick="this.closest('form').submit();" to the picture, the picture itself becomes an 
+                              interactive element that can submit the form when clicked.  -->
+    <!--  <input type="hidden"> stores information about the image as in the image path  -->     
+        <form action="playmusic.php" method="post">
             <input type="hidden" name="music_picture" value="images/songsPictures/bst.jpeg">
-        <img src="images/songsPictures/bst.jpeg" alt="" id="eve" onclick= "this.parentNode.submit();">
+            <img src="images/songsPictures/bst.jpeg" alt="" id="eve" onclick="this.parentNode.submit();">
         </form>
         <h3>Blood, Sweat & Tears By BTS</h3>
     </div>
     
     <div class="item">
-        <form action="" method="post">
-            <input type="hidden" name="music_picture" value="images/songsPictures/Eve.jpeg">
-        <img src="images/songsPictures/Eve.jpeg" alt="" id="eve" onclick= "this.parentNode.submit();">
-        </form>
-        <h3>Christmas Eve By STRAY KIDS</h3>
-    </div>
+    <form action="playmusic.php" method="post">
+        <input type="hidden" name="music_picture" value="images/songsPictures/Stray_Kids_-_Christmas_EveL.jpeg">
+            <img src="images/songsPictures/Stray_Kids_-_Christmas_EveL.jpeg" alt="Christmas Eve" id="eve" onclick="this.parentNode.submit();">
+    </form>
+    <h3>Christmas Eve By STRAY KIDS</h3>
+</div>
 
     <div class="item">
-    <form action="" method="post">
+    <form action="playmusic.php" method="post">
     <input type="hidden" name="music_picture" value="images/songsPictures/but.png">
-        <img src="images/songsPictures/but.png" alt="" id="eve" onclick= "this.closest('form').submit();">
-        <h3>Butter By BTS</h3>
+      <img src="images/songsPictures/but.png" alt="" id="eve" onclick= "this.closest('form').submit();"> 
+    <h3>Butter By BTS</h3>
 </form>
     </div>
    
     <div class="item">
-        <form action="" method="post">
+        <form action="playmusic.php" method="post">
             <input type="hidden" name="music_picture" value="images/songsPictures/dyn.jpeg">
-        <img src="images/songsPictures/dyn.jpeg" alt="" id="eve" onclick= "this.parentNode.submit();">
+        <img src="images/songsPictures/dyn.jpeg" alt="" id="eve" onclick= "this.closest('form').submit();">
         <h3>Dynamite By BTS</h3>
         </form>
     </div>
 
     <div class="item">
-        <form action="" method="post">
+        <form action="playmusic.php" method="post">
     <input type="hidden" name="music_picture" value="images/songsPictures/Taemin_Advice_EP_cover.jpg">
-        <img src="images/songsPictures/Taemin_Advice_EP_cover.jpg" alt="" id="eve" onclick= "this.closest('form').submit();">
-        <h3>Advice By TAEMIN</h3>
+        <img src="images/songsPictures/Taemin_Advice_EP_cover.jpg" alt="" id="eve" onclick= "this.closest('form').submit();">  
+        <h3>Advice By TAEMIN</h3>    
 </form>
     </div>
 
     <div class="item">
-         <form action="" method="post">
-    <input type="hidden" name="music_picture" value="images/songsPictures/dwc.jpeg">
+         <form action="playmusic.php" method="post">
+    <input type="hidden" name="music_picture" value="images/songsPictures/dwc.jpeg">  
         <img src="images/songsPictures/dwc.jpeg" alt="" id="eve" onclick= "this.closest('form').submit();">
         <h3>Don't Wanna Cry By SEVENTEEN</h3>
         </form>
     </div>
 
     <div class="item">
-         <form action="" method="post">
+         <form action="playmusic.php" method="post">
     <input type="hidden" name="music_picture" value="images/songsPictures/ls.jpeg">
         <img src="images/songsPictures/ls.jpeg" alt="" id="eve" onclick= "this.closest('form').submit();">
         <h3>Love Scenario By iKON</h3>
@@ -208,25 +198,25 @@ if (isset($_SESSION['signUp']) && $_SESSION['signUp'] === true) {
     </div>
 
     <div class="item">
-         <form action="" method="post">
-    <input type="hidden" name="music_picture" value="images/songsPictures/Jessi_-_Zoom.png">
+         <form action="playmusic.php" method="post">
+    <input type="hidden" name="music_picture" value="images/songsPictures/Jessi_-_Zoom.png">  
         <img src="images/songsPictures/Jessi_-_Zoom.png" alt="" id="eve" onclick= "this.closest('form').submit();">
         <h3>Zoom By JESSI</h3>
         </form>
     </div>
 
     <div class="item">
-         <form action="" method="post">
-    <input type="hidden" name="music_picture" value="images/songsPictures/Pink_Venom_Cover.jpg">
+         <form action="playmusic.php" method="post">
+    <input type="hidden" name="music_picture" value="images/songsPictures/Pink_Venom_Cover.jpg">  
         <img src="images/songsPictures/Pink_Venom_Cover.jpg" alt="" id="eve" onclick= "this.closest('form').submit();">
         <h3>Pink Venom By BLACKPINK</h3>
         </form>
     </div>
 
     <div class="item">
-         <form action="" method="post">
-    <input type="hidden" name="music_picture" value="images/songsPictures/LGO.jpeg">
-        <img src="images/songsPictures/LGO.jpeg" alt="" id="eve" onclick= "this.closest('form').submit();">
+         <form action="playmusic.php" method="post">
+    <input type="hidden" name="music_picture" value="images/songsPictures/BTS_-_Life_Goes_On.png">  
+        <img src="images/songsPictures/BTS_-_Life_Goes_On.png" alt="" id="eve" onclick= "this.closest('form').submit();">
         <h3>Life Goes On By BTS</h3>
         </form>
     </div>
@@ -241,74 +231,83 @@ if (isset($_SESSION['signUp']) && $_SESSION['signUp'] === true) {
     <h2 class="kpop-rnb">POP/R&B Playlist</h2>
 <div class="playlists">
     <div class="item">
-        <form action="" method="post">
-    <input type="hidden" name="music_picture" value="images/songsPictures/Best_Part_of_Me.png">
+        <form action="playmusic.php" method="post">
+    <input type="hidden" name="music_picture" value="images/songsPictures/Best_Part_of_Me.png">  
         <img src="images/songsPictures/Best_Part_of_Me.png" alt="" id="eve" onclick= "this.closest('form').submit();">
         <h3>Best Part Of Me By ED SHEERAN</h3>
         </form>
     </div>
 
     <div class="item">
-        <form action="" method="post">
-    <input type="hidden" name="music_picture" value="images/songsPictures/Demi_Lovato_-_Heart_Attack.png">
+        <form action="playmusic.php" method="post">
+    <input type="hidden" name="music_picture" value="images/songsPictures/Demi_Lovato_-_Heart_Attack.png">  
         <img src="images/songsPictures/Demi_Lovato_-_Heart_Attack.png" alt="" id="eve" onclick= "this.closest('form').submit();">
         <h3>Heart Attack By DEMI LOVATO</h3>
         </form>
     </div>
 
     <div class="item">
-        <form action="" method="post">
-    <input type="hidden" name="music_picture" value="images/songsPictures/Dan_+_Shay_and_Justin_Bieber_-_10,000_Hours.png">
+        <form action="playmusic.php" method="post">
+    <input type="hidden" name="music_picture" value="images/songsPictures/Dan_+_Shay_and_Justin_Bieber_-_10,000_Hours.png">  
         <img src="images/songsPictures/Dan_+_Shay_and_Justin_Bieber_-_10,000_Hours.png" alt="" id="eve" onclick= "this.closest('form').submit();">
         <h3>10,000 Hours By DAN, SHAY, JUSTIN BEIBER</h3>
         </form>
     </div>
 
     <div class="item">
-        <form action="" method="post">
-    <input type="hidden" name="music_picture" value="images/songsPictures/am.jpeg">
-        <img src="images/songsPictures/am.jpeg" alt="" id="eve" onclick= "this.closest('form').submit();">
+        <form action="playmusic.php" method="post">
+    <input type="hidden" name="music_picture" value="images/songsPictures/2002_single_by_Anne-Marie.jpg">  
+        <img src="images/songsPictures/2002_single_by_Anne-Marie.jpg" alt="" id="eve" onclick= "this.closest('form').submit();">
         <h3>2002 By ANNE MARIE</h3>
         </form>
     </div>
 
     <div class="item">
-        <form action="" method="post">
-    <input type="hidden" name="music_picture" value="images/songsPictures/duncan.jpeg">
+        <form action="playmusic.php" method="post">
+    <input type="hidden" name="music_picture" value="images/songsPictures/duncan.jpeg">  
         <img src="images/songsPictures/duncan.jpeg" alt="" id="eve" onclick= "this.closest('form').submit();">
         <h3>Arcade By DUNCAN LAURENCE </h3>
         </form>
     </div>
 
     <div class="item">
-        <form action="" method="post">
-    <input type="hidden" name="music_picture" value="images/songsPictures/Ed_Sheeran_-_Beautiful_People.png">
+        <form action="playmusic.php" method="post">
+    <input type="hidden" name="music_picture" value="images/songsPictures/Ed_Sheeran_-_Beautiful_People.png">  
         <img src="images/songsPictures/Ed_Sheeran_-_Beautiful_People.png" alt="" id="eve" onclick= "this.closest('form').submit();">
         <h3>Beautiful People By ED SHEERAN</h3>
         </form>
     </div>
 
     <div class="item">
-        <form action="" method="post">
-    <input type="hidden" name="music_picture" value="images/songsPictures/rock.jpeg">
+        <form action="playmusic.php" method="post">
+    <input type="hidden" name="music_picture" value="images/songsPictures/rock.jpeg"> 
         <img src="images/songsPictures/rock.jpeg" alt="" id="eve" onclick= "this.closest('form').submit();">
         <h3>Rockabye By CLEAN BANDIT</h3>
         </form>
     </div>
 
     <div class="item">
-        <img src="images/songsPictures/outside.jpeg" alt="" id="eve">
+    <form action="playmusic.php" method="post">
+    <input type="hidden" name="music_picture" value="images/songsPictures/outside.jpeg"> 
+        <img src="images/songsPictures/outside.jpeg" alt="" id="eve" onclick= "this.closest('form').submit();">
         <h3>Car's Outside By JAMES ARTHUR</h3>
+         </form>
     </div>
 
     <div class="item">
-        <img src="images/songsPictures/Benson_Boone_-_Beautiful_Things.png" alt="" id="eve">
+    <form action="playmusic.php" method="post">
+    <input type="hidden" name="music_picture" value="images/songsPictures/Benson_Boone_-_Beautiful_Things.png"> 
+        <img src="images/songsPictures/Benson_Boone_-_Beautiful_Things.png" alt="" id="eve" onclick= "this.closest('form').submit();">
         <h3>Beautiful Things By BENSON BOONE</h3>
+         </form>
     </div>
 
     <div class="item">
-        <img src="images/songsPictures/perfect.jpeg" alt="" id="eve">
+        <form action="playmusic.php" method="post">
+        <input type="hidden" name="music_picture" value="images/songsPictures/perfect.jpeg"> 
+        <img src="images/songsPictures/perfect.jpeg" alt="" id="eve" onclick= "this.closest('form').submit();">
         <h3>Perfect By ED SHEERAN</h3>
+         </form>
     </div>
     
 
@@ -321,9 +320,13 @@ if (isset($_SESSION['signUp']) && $_SESSION['signUp'] === true) {
     <h2 class="kpop-rnb">HIP-POP Playlist</h2>
 <div class="playlists">
     <div class="item">
-        <img src="images/songsPictures/band.jpeg" alt="" id="eve">
+    <form action="playmusic.php" method="post">
+            <input type="hidden" name="music_picture" value="images/songsPictures/band.jpeg"> 
+        <img src="images/songsPictures/band.jpeg" alt="" id="eve" onclick= "this.closest('form').submit();">
         <h3>Band4Band By CENTRAL CEE</h3>
+        </form>
     </div>
+
     <div class="item">
         <img src="images/songsPictures/lala.jpeg" alt="" id="eve-lrwb">
         <h3>Lalali by SEVENTEEN</h3>
@@ -332,22 +335,27 @@ if (isset($_SESSION['signUp']) && $_SESSION['signUp'] === true) {
         <img src="images/songsPictures/work.jpeg" alt="" id="eve-lrwb">
         <h3>Work By ATEEZ</h3>
     </div>
+
     <div class="item">
         <img src="images/songsPictures/rockstar.jpeg" alt="" id="eve-lrwb">
-        < <h3>RockStar By LISA</h3>
+         <h3>RockStar By LISA</h3>
     </div>
+
     <div class="item">
         <img src="images/songsPictures/bouncy.jpeg" alt="" id="eve-lrwb">
         <h3>Bouncy By ATEEZ </h3>
     </div>
+
     <div class="item">
         <img src="images/songsPictures/Ed_Sheeran_-_Beautiful_People.png" alt="" id="eve">
         <h3>Mockingbird by EMINEM</h3>
     </div>
+
     <div class="item">
         <img src="images/songsPictures/rock.jpeg" alt="" id="eve">
         <h3>In The Bible by DRAKE</h3>
     </div>
+
     <div class="item">
         <img src="images/songsPictures/outside.jpeg" alt="" id="eve">
         <h3>Rules by DOJA CAT</h3>
@@ -356,10 +364,14 @@ if (isset($_SESSION['signUp']) && $_SESSION['signUp'] === true) {
         <img src="images/songsPictures/Benson_Boone_-_Beautiful_Things.png" alt="" id="eve">
         <h3>Mask Off by FUTURE</h3>
     </div>
+
     <div class="item">
         <img src="images/songsPictures/perfect.jpeg" alt="" id="eve">
         <h3>Street by DOJA CAT</h3>
     </div>
+
+ </div>
+</section>
     
 <!-- GOSPEL PLAYLIST -->
 <section>
@@ -369,42 +381,52 @@ if (isset($_SESSION['signUp']) && $_SESSION['signUp'] === true) {
         <img src="images/songsPictures/maverickfirm.jpeg" alt="" id="eve">
         <h3>Firm Foundation by MAVERICK CITY MUSIC</h3>
     </div>
+
     <div class="item">
         <img src="images/songsPictures/rescue lauren.jpeg" alt="" id="eve-lrwb">
         <h3>Rescue by LAUREN DIAGLE</h3>
     </div>
+
     <div class="item">
         <img src="images/songsPictures/iba nath.jpeg" alt="" id="eve-lrwb">
         <h3>Iba by NATHANIEL BASSEY</h3>
     </div>
+
     <div class="item">
         <img src="images/songsPictures/takeovertheo.jpeg" alt="" id="eve-lrwb">
         <h3>Takeover by THEOPHILUS SUNDAY</h3>
     </div>
+
     <div class="item">
         <img src="images/songsPictures/lauren.jpeg" alt="" id="eve-lrwb">
         <h3>Remember by LAUREN DIAGLE</h3>
     </div>
+
     <div class="item">
         <img src="images/songsPictures/yet maverick.jpeg" alt="" id="eve">
         <h3>Yet by MAVERICK CITY</h3>
     </div>
+
     <div class="item">
         <img src="images/songsPictures/yousay.jpeg" alt="" id="eve">
         <h3>You Say By LAUREN DIAGLE</h3>
     </div>
+
     <div class="item">
         <img src="images/songsPictures/mosesbliss.jpeg" alt="" id="eve">
         <h3>You I Live For by MOSES BLISS</h3>
     </div>
+
     <div class="item">
         <img src="images/songsPictures/larageorge.jpeg" alt="" id="eve">
         <h3>Ijoba Orun by LARA GEORGE</h3>
     </div>
+
     <div class="item">
         <img src="images/songsPictures/fragrancetofire.jpeg" alt="" id="eve">
         <h3>Fragrance To Fire by DUNSIN OYEKAN</h3>
     </div>
+
 </div>
 </section>
 
@@ -416,50 +438,54 @@ if (isset($_SESSION['signUp']) && $_SESSION['signUp'] === true) {
         <img src="images/songsPictures/asake.jpeg" alt="" id="eve">
         <h3>I Swear by ASAKE</h3>   
     </div>
+
     <div class="item">
         <img src="images/songsPictures/asake.jpeg" alt="" id="eve-lrwb">
         <h3>Mentally by ASAKE</h3>
     </div>
+
     <div class="item">
         <img src="images/songsPictures/forever psquare.jpeg" alt="" id="eve-lrwb">
         <h3>Forever by P-SQUARE</h3>
     </div>
+
     <div class="item">
         <img src="images/songsPictures/runtown.jpeg" alt="" id="eve-lrwb">
         <h3>Mad Over You by RUNTOWN</h3>
     </div>
+
     <div class="item">
         <img src="images/songsPictures/nwababy.jpeg" alt="" id="eve-lrwb">
         <h3>Nwa Baby by DAVIDO</h3>
     </div>
+
     <div class="item">
         <img src="images/songsPictures/frames wizkid.jpeg" alt="" id="eve">
         <h3>Frames by WIZKID</h3>
     </div>
+
     <div class="item">
         <img src="images/songsPictures/demodavido.jpeg" alt="" id="eve">
         <h3>Demo by DAVIDO</h3>
     </div>
+
     <div class="item">
         <img src="images/songsPictures/noone psquare.jpeg" alt="" id="eve">
         <h3>No One Like You by P-SQUARE</h3>
     </div>
+
     <div class="item">
         <img src="images/songsPictures/ozebarema.jpeg" alt="" id="eve">
         <h3>Ozeba by REMA</h3>
     </div>
+
     <div class="item">
         <img src="images/songsPictures/asake.jpeg" alt="" id="eve">
         <h3>Wave by ASAKE</h3>
     </div>
+
 </div>
 </section>
-
-            <div class="main-content">
-                <div class="image-container">
-                   <!-- <img src="black-rappers-caps-stage-with-spotlights_266732-8536.png" alt="Main content image"> -->
-                </div>
-            </div>
 
 <!-- <div id="trending-songs">
     <h2 id="trending">Top 10 Trending Songs</h2>
